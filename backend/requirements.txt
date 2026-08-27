@@ -1,0 +1,22 @@
+Flask==3.0.3
+# glavni web framework za backend
+
+Flask-SQLAlchemy==3.1.1
+# ORM - omogućava da radimo sa bazom preko Python klasa umesto sirovog SQL-a
+
+Flask-Migrate==4.0.7
+# alat za migracije baze - prati promene u modelima i ažurira strukturu baze
+
+Flask-CORS==4.0.1
+# dozvoljava frontend-u (React na portu 3000) da šalje zahteve backend-u (port 5000)
+
+PyMySQL==1.1.1
+# drajver koji SQLAlchemy koristi da se poveže na MySQL bazu
+
+python-dotenv==1.0.1
+# učitava promenljive iz .env fajla u aplikaciju
+
+Flask-JWT-Extended==4.6.0
+# za autentifikaciju (login) preko JWT tokena - admin/trener role
+
+cryptography==43.0.1

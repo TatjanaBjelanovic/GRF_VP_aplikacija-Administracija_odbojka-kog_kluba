@@ -1,0 +1,19 @@
+# .gitignore
+# Fajlovi i folderi koje NE želimo da pratimo/pošaljemo na Git repozitorijum
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Node / React
+node_modules/
+frontend/build/
+
+# Docker
+*.log
+
+# Editor
+.vscode/
+.idea/

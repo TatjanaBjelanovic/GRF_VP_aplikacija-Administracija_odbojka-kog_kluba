@@ -1,0 +1,156 @@
+/* theme.css
+   Moderan, minimalan izgled - bele kartice ("prozori") na svetlo-sivoj pozadini,
+   sa senkom umesto obojenih okvira. Plava kao glavna akcentna boja, žuta za istaknuta dugmad. */
+
+:root {
+  --boja-plava: #2563EB;
+  --boja-zuta: #F5B400;
+  --boja-crna: #111827;
+  --boja-siva-pozadina: #F3F4F6;
+  --boja-siva-linija: #E5E7EB;
+}
+
+/* ============ POZADINA - jednobojna, svetlo siva, bez šare ============ */
+
+body {
+  background-color: var(--boja-siva-pozadina);
+  color: var(--boja-crna);
+}
+
+/* ============ NAVIGACIJA - tamna, čista, bez upadljivih linija ============ */
+
+.navbar {
+  background-color: var(--boja-crna) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: #FFFFFF !important;
+}
+
+.navbar-brand {
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+
+/* ============ KARTICE - bele "plutajuće" celine, jasno odvojene senkom ============ */
+/* OVO je glavna izmena - svaki Card sad izgleda kao poseban prozor/panel */
+
+.card {
+  border: none;
+  border-radius: 14px;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* dve senke - jedna tanka blizu ivice, jedna šira i mekša - daje "podignut" 3D utisak */
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  background-color: #FFFFFF;
+  color: var(--boja-crna);
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--boja-siva-linija);
+  padding: 1rem 1.25rem;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+/* ============ TABELE - čiste, bez obojenog zaglavlja, samo podebljano ============ */
+
+.table thead th {
+  background-color: #FAFBFC;
+  color: var(--boja-crna);
+  font-weight: 600;
+  border-bottom: 2px solid var(--boja-siva-linija);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  /* uppercase + malo slova - tipičan "moderni dashboard" stil za zaglavlja tabela */
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: #FAFBFC;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+/* ============ DUGMAD - zaobljena, moderna, plava/žuta akcentna ============ */
+
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--boja-plava);
+  border-color: var(--boja-plava);
+}
+.btn-primary:hover {
+  background-color: #1D4ED8;
+  border-color: #1D4ED8;
+}
+
+.btn-success {
+  background-color: var(--boja-zuta);
+  border-color: var(--boja-zuta);
+  color: var(--boja-crna);
+}
+.btn-success:hover {
+  background-color: #DDA300;
+  border-color: #DDA300;
+  color: var(--boja-crna);
+}
+
+.btn-outline-primary {
+  color: var(--boja-plava);
+  border-color: var(--boja-plava);
+}
+
+/* ============ Naslovi stranica ============ */
+
+h2 {
+  font-weight: 700;
+  color: var(--boja-crna);
+}
+
+h5, h6 {
+  font-weight: 600;
+  color: var(--boja-crna);
+}
+
+/* ============ Forme - malo zaobljenije, moderniji izgled inputa ============ */
+
+.form-control, .form-select {
+  border-radius: 8px;
+  border-color: var(--boja-siva-linija);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--boja-plava);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ============ Modal (iskačući prozori) - zaobljeniji, u skladu sa karticama ============ */
+
+.modal-content {
+  border-radius: 14px;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--boja-siva-linija);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--boja-siva-linija);
+}

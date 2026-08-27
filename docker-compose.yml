@@ -1,0 +1,45 @@
+# docker-compose.yml
+# Ovaj fajl definiše sve servise (kontejnere) koji čine našu aplikaciju
+# i kako se oni međusobno povezuju
+
+version: '3.8'  # verzija docker-compose sintakse koju koristimo
+
+services:  # ovde nabrajamo sve kontejnere koje želimo da pokrenemo
+
+  db:  # naziv servisa za bazu podataka - ostali servisi ga zovu po ovom imenu "db"
+    image: mysql:8.0  # koristimo zvaničnu MySQL sliku, verzija 8.0
+    container_name: odbojka_db  # ime koje će kontejner imati kad se pokrene
+    restart: always  # ako se kontejner sruši, Docker ga automatski ponovo pokreće
+    environment:  # promenljive okruženja koje MySQL čita pri pokretanju
+      MYSQL_ROOT_PASSWORD: root_lozinka  # lozinka za root korisnika baze (promeni je!)
+      MYSQL_DATABASE: odbojka_klub  # ime baze koja se automatski kreira
+      MYSQL_USER: odbojka_user  # kreira se dodatni korisnik baze
+      MYSQL_PASSWORD: odbojka_pass  # lozinka tog korisnika (promeni je!)
+    ports:
+      - "3306:3306"  # mapira port 3306 sa tvog računara na port 3306 u kontejneru
+    volumes:
+      - db_data:/var/lib/mysql  # čuva podatke baze trajno, čak i kad se kontejner ugasi
+
+  backend:  # naziv servisa za Flask backend
+    build: ./backend  # Docker gradi sliku na osnovu Dockerfile-a u folderu ./backend
+    container_name: odbojka_backend  # ime kontejnera
+    restart: always  # automatski restart ako se sruši
+    ports:
+      - "5000:5000"  # backend će biti dostupan na http://localhost:5000
+    environment:
+      DATABASE_URL: mysql+pymysql://odbojka_user:odbojka_pass@db:3306/odbojka_klub
+      # ova linija govori Flask-u kako da se poveže na MySQL servis "db"
+    depends_on:
+      - db  # backend čeka da se baza pokrene pre nego što krene sam
+
+  frontend:  # naziv servisa za React frontend
+    build: ./frontend  # Docker gradi sliku na osnovu Dockerfile-a u folderu ./frontend
+    container_name: odbojka_frontend  # ime kontejnera
+    restart: always  # automatski restart ako se sruši
+    ports:
+      - "3000:3000"  # frontend će biti dostupan na http://localhost:3000
+    depends_on:
+      - backend  # frontend čeka da backend bude spreman
+
+volumes:  # deklarišemo trajne "volume-e" koje smo koristili gore
+  db_data:  # ovde se fizički čuvaju podaci MySQL baze na tvom računaru
