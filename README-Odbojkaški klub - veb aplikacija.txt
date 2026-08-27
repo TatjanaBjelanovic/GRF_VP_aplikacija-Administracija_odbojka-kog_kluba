@@ -24,11 +24,11 @@ Rad aplikacije
 
 Trener može da radi u aplikaciji:
 
-Kad se uloguj, na početnoj strani vidi svoj raspored za narednih 10 dana - i treninge i utakmice njegovih selekcija. Ako baš tog dana ima trening, postoji dugme da unese ko je od igrača bio prisutan - samo se čekiraju imena. Ako se desi da ne može trener da držiš neki od svoji treninga, ima dugme "Ne mogu da držim" - to se odmah javlja adminu, koji onda dodeljuje nekog drugog trenera za taj konkretan termin.
+Kad se uloguje, na početnoj strani vidi svoj raspored za narednih 10 dana - i treninge i utakmice njegovih selekcija. Ako baš tog dana ima trening, postoji dugme da unese ko je od igrača bio prisutan - samo se čekiraju imena. Ako se desi da ne može trener da drži neki od svoji treninga, ima dugme "Ne mogu da držim" - to se odmah javlja adminu, koji onda dodeljuje nekog drugog trenera za taj konkretan termin.
 
 Stranica Termini pokazuje stalni nedeljni raspored kluba - ko kada trenira i gde, u obliku tabele (dani kao kolone, vremena kao redovi). To može da menja samo admin, ali svi mogu da vide.
 
-Na Utakmicama zakazuješ utakmice - upiše se protivnik, datum, vreme, i da li smo domaćini (ako jesmo, može da se izabere od sala koje klub već ima, ako ne izlazi polje za slobodan ulaz).
+Na Utakmicama zakazuješ utakmice - upiše se protivnik, datum, vreme, i da li smo domaćini (ako jesmo, može da se izabere od sala koje klub već ima, ako ne izlazi polje za slobodan unos).
 
 Unos članarine pokazuje samo igrače koji nešto duguju, iz selekcija ulogovanog trenera. Klikne na ime, vidi koliko duguje (cena se sama računa, uzima u obzir popust ako ga igrač ima), i ili označi da je sve plaćeno, ili upiše tačan iznos ako je platio manje/drugačije.
 
