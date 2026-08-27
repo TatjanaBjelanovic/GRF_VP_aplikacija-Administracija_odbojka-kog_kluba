@@ -34,4 +34,4 @@ Unos članarine pokazuje samo igrače koji nešto duguju, iz selekcija ulogovano
 
 Pod Izveštaji vidi, za mesec ili celu godinu, koliko je treninga održao/la, koliko je članarina naplaćeno, i slično - samo za svoje selekcije.
 
-Ako si admin, ima i posebnu stranicu Administracija gde se sve ostalo podešava - dodaju se novi igrači, treneri, sale, selekcije, termini, mogu se uvesti podaci iz Excel fajla umesto ručnog kucanja, i tu se vidi kompletan pregled cele škole odbojke, ne samo svojih selekcija.
+Ako je admin, ima i posebnu stranicu Administracija gde se sve ostalo podešava - dodaju se novi igrači, treneri, sale, selekcije, termini, mogu se uvesti podaci iz Excel fajla umesto ručnog kucanja, i tu se vidi kompletan pregled cele škole odbojke, ne samo svojih selekcija.
